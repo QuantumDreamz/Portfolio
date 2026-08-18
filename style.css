@@ -1,204 +1,299 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+:root {
+  --background: #0c0d0e;
+  --surface: #151719;
+  --text: #f3f3f3;
+  --muted: #a2a7ad;
+  --border: #292c30;
+  --accent: #b7ff5a;
+  --max-width: 1100px;
+}
 
-  <meta
-    name="description"
-    content="Personal portfolio showcasing my projects, skills, and experience."
-  />
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <title>Your Name | Portfolio</title>
+html {
+  scroll-behavior: smooth;
+}
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-<body>
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#home" class="logo">YN.</a>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+.navbar {
+  max-width: var(--max-width);
+  margin: auto;
+  min-height: 80px;
 
-  <main>
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <p class="eyebrow">Hello, I'm</p>
+  padding: 0 24px;
+}
 
-      <h1>Your Name</h1>
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+}
 
-      <h2>Developer · Designer · Problem Solver</h2>
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
 
-      <p class="hero-description">
-        I build useful, thoughtful digital experiences and enjoy turning
-        ideas into polished products.
-      </p>
+.nav-links a {
+  color: var(--muted);
+  transition: 0.2s;
+}
 
-      <div class="hero-buttons">
-        <a href="#projects" class="button primary">View my work</a>
+.nav-links a:hover {
+  color: var(--text);
+}
 
-        <a
-          href="https://github.com/YOUR-USERNAME"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button secondary"
-        >
-          GitHub
-        </a>
-      </div>
-    </section>
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 24px;
+}
 
-    <!-- About -->
-    <section id="about">
-      <p class="section-label">About</p>
-      <h2>About me</h2>
+section {
+  padding: 110px 0;
+}
 
-      <div class="about-grid">
-        <div>
-          <p>
-            I'm a [student / developer / designer / engineer] interested in
-            building products that solve meaningful problems.
-          </p>
+.hero {
+  min-height: calc(100vh - 80px);
 
-          <p>
-            I'm particularly interested in [your interests]. When I'm not
-            working on projects, you'll probably find me [hobby/interests].
-          </p>
-        </div>
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-        <div class="about-card">
-          <p><strong>Based in</strong><br />Your City</p>
-          <p><strong>Focus</strong><br />Web Development</p>
-          <p><strong>Currently</strong><br />Open to opportunities</p>
-        </div>
-      </div>
-    </section>
+.eyebrow,
+.section-label {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
 
-    <!-- Projects -->
-    <section id="projects">
-      <p class="section-label">Selected work</p>
-      <h2>Projects</h2>
+.hero h1 {
+  font-size: clamp(4rem, 12vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
 
-      <div class="project-grid">
+.hero h2 {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+}
 
-        <article class="project-card">
-          <div class="project-number">01</div>
+.hero-description {
+  max-width: 620px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
 
-          <h3>Project One</h3>
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
 
-          <p>
-            A short explanation of the problem, what you built, and why
-            the project is interesting.
-          </p>
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-weight: 650;
+  transition: 0.2s;
+}
 
-          <div class="tags">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
+.primary {
+  background: var(--accent);
+  color: #101010;
+}
 
-          <div class="project-links">
-            <a href="#">Live demo ↗</a>
-            <a href="#">GitHub ↗</a>
-          </div>
-        </article>
+.primary:hover {
+  transform: translateY(-2px);
+}
 
-        <article class="project-card">
-          <div class="project-number">02</div>
+.secondary {
+  border: 1px solid var(--border);
+}
 
-          <h3>Project Two</h3>
+.secondary:hover {
+  background: var(--surface);
+}
 
-          <p>
-            Explain what this project does, what challenge you solved,
-            and your contribution.
-          </p>
+section > h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 40px;
+}
 
-          <div class="tags">
-            <span>Python</span>
-            <span>API</span>
-            <span>Data</span>
-          </div>
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
 
-          <div class="project-links">
-            <a href="#">Live demo ↗</a>
-            <a href="#">GitHub ↗</a>
-          </div>
-        </article>
+.about-grid p + p {
+  margin-top: 20px;
+}
 
-        <article class="project-card">
-          <div class="project-number">03</div>
+.about-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 18px;
+}
 
-          <h3>Project Three</h3>
+.about-card strong {
+  color: var(--text);
+}
 
-          <p>
-            Add another strong project here. Three excellent projects are
-            usually better than ten unfinished ones.
-          </p>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 
-          <div class="tags">
-            <span>React</span>
-            <span>UI/UX</span>
-          </div>
+.project-card {
+  position: relative;
 
-          <div class="project-links">
-            <a href="#">Live demo ↗</a>
-            <a href="#">GitHub ↗</a>
-          </div>
-        </article>
+  padding: 28px;
+  min-height: 340px;
 
-      </div>
-    </section>
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
 
-    <!-- Skills -->
-    <section id="skills">
-      <p class="section-label">Toolkit</p>
-      <h2>Skills</h2>
+  display: flex;
+  flex-direction: column;
 
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>SQL</span>
-        <span>Figma</span>
-      </div>
-    </section>
+  transition: transform 0.25s;
+}
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <p class="section-label">Get in touch</p>
+.project-card:hover {
+  transform: translateY(-5px);
+}
 
-      <h2>Let's build something.</h2>
+.project-number {
+  color: var(--accent);
+  font-family: monospace;
+  margin-bottom: 50px;
+}
 
-      <p>
-        I'm always interested in interesting projects, collaborations,
-        and opportunities.
-      </p>
+.project-card h3 {
+  font-size: 1.5rem;
+}
 
-      <a href="mailto:you@example.com" class="button primary">
-        Email me
-      </a>
-    </section>
+.project-card p {
+  color: var(--muted);
+  margin-top: 12px;
+}
 
-  </main>
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
 
-  <footer>
-    <p>
-      © <span id="year"></span> Your Name · Built with HTML, CSS & JavaScript
-    </p>
-  </footer>
+.tags span,
+.skills span {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.project-links {
+  margin-top: auto;
+  padding-top: 30px;
+
+  display: flex;
+  gap: 18px;
+}
+
+.project-links a {
+  color: var(--accent);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  font-size: 1rem;
+  padding: 10px 16px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: var(--muted);
+  margin: 0 auto 30px;
+  max-width: 550px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .about-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+}
