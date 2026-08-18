@@ -16,3 +16,190 @@
 </head>
 
 <body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#home" class="logo">YN.</a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <p class="eyebrow">Hello, I'm</p>
+
+      <h1>Your Name</h1>
+
+      <h2>Developer · Designer · Problem Solver</h2>
+
+      <p class="hero-description">
+        I build useful, thoughtful digital experiences and enjoy turning
+        ideas into polished products.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="button primary">View my work</a>
+
+        <a
+          href="https://github.com/YOUR-USERNAME"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button secondary"
+        >
+          GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <p class="section-label">About</p>
+      <h2>About me</h2>
+
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a [student / developer / designer / engineer] interested in
+            building products that solve meaningful problems.
+          </p>
+
+          <p>
+            I'm particularly interested in [your interests]. When I'm not
+            working on projects, you'll probably find me [hobby/interests].
+          </p>
+        </div>
+
+        <div class="about-card">
+          <p><strong>Based in</strong><br />Your City</p>
+          <p><strong>Focus</strong><br />Web Development</p>
+          <p><strong>Currently</strong><br />Open to opportunities</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <p class="section-label">Selected work</p>
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-number">01</div>
+
+          <h3>Project One</h3>
+
+          <p>
+            A short explanation of the problem, what you built, and why
+            the project is interesting.
+          </p>
+
+          <div class="tags">
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#">Live demo ↗</a>
+            <a href="#">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">02</div>
+
+          <h3>Project Two</h3>
+
+          <p>
+            Explain what this project does, what challenge you solved,
+            and your contribution.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>API</span>
+            <span>Data</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#">Live demo ↗</a>
+            <a href="#">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">03</div>
+
+          <h3>Project Three</h3>
+
+          <p>
+            Add another strong project here. Three excellent projects are
+            usually better than ten unfinished ones.
+          </p>
+
+          <div class="tags">
+            <span>React</span>
+            <span>UI/UX</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#">Live demo ↗</a>
+            <a href="#">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <p class="section-label">Toolkit</p>
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>SQL</span>
+        <span>Figma</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <p class="section-label">Get in touch</p>
+
+      <h2>Let's build something.</h2>
+
+      <p>
+        I'm always interested in interesting projects, collaborations,
+        and opportunities.
+      </p>
+
+      <a href="mailto:you@example.com" class="button primary">
+        Email me
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Your Name · Built with HTML, CSS & JavaScript
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
